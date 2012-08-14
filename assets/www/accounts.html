@@ -9,7 +9,6 @@
     <link href="css/common.css" rel="stylesheet" type="text/css">
     <link href="css/accounts.css" rel="stylesheet" type="text/css">
     <link href="css/dropdown.css" rel="stylesheet" type="text/css">
-    
         
     <script type="text/javascript" charset="utf-8" src="js/cordova-1.7.0.js"></script> 
     <script type="text/javascript" src="js/jquery.js"></script>
@@ -21,18 +20,13 @@
     <script type="text/javascript" src="js/dropdown.js"></script>
     <script type="text/javascript" src="js/imagebutton.js"></script>
     
-    
-    
     <script type="text/javascript">
     
     function deleteAccount(accountId) {
         alert("DELETED" + accountId);
     }
     
-    function addAccount() {
-        
-        var values = { account_id: "twitter-4ndreaSt4gi", 
-                account_name : "4ndreaSt4gi"}
+    function addAccount(values) {
         
         templates.getTemplate("templates/account_line.partial", function(template) {
             newAccountLine = templates.fillTemplate(template, values);
@@ -66,6 +60,26 @@
         
         dropAccountType.addRow("pixmaps/turpialtwitter.png", "Twitter")
         .addRow("pixmaps/turpialidentica.png", "Identica");
+
+        addAccount({ account_id: "identica-4ndreaSt4gi", 
+                     account_name : "4ndreaSt4gi",
+                     account_img : "pixmaps/turpialidentica.png",})
+
+        addAccount({ account_id: "identica-phonegap", 
+                     account_name : "Phonegap",
+                     account_img : "pixmaps/turpialidentica.png",})
+
+        addAccount({ account_id: "twitter-4ndreaSt4gi", 
+                     account_name : "4ndreaSt4gi",
+                     account_img : "pixmaps/turpialtwitter.png",})
+
+        addAccount({ account_id: "twitter-Turpial", 
+                     account_name : "Turpial",
+                     account_img : "pixmaps/turpialtwitter.png",})
+
+        addAccount({ account_id: "twitter-Twitter", 
+                     account_name : "Twitter",
+                     account_img : "pixmaps/turpialtwitter.png",})
 
     });
     

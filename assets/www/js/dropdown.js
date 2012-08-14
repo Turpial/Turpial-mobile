@@ -33,6 +33,7 @@ $(document).ready(function() {
             var parameters = $.extend(defaults, options);
             var width = 0;
             var that = this;
+            var lines = 0;
 
             function createMe(parameters) {
 
@@ -55,8 +56,9 @@ $(document).ready(function() {
                 $("#" + parameters.containerId).addClass("dropdown");
                 $("#" + parameters.containerId).append(divMain);
                 
-                divWrapper = "<div class='wrapper' id='" + parameters.containerId + "wrapper" + "' style='" +
-                    "height: 120px;" +
+                divWrapper = "<div class='wrapper' id='" + parameters.containerId + 
+                    "wrapper" + "' style='" +
+                    "height: 160px;" +
                     "width:" + width + "px;'></div>";
                 
                 var mainRow = createRow(height, width, parameters.image, parameters.value, "mainrow");
@@ -103,13 +105,25 @@ $(document).ready(function() {
                 
                 
                 if(text != undefined) {
-                    divRow += "<div style='display: block;float: right; height:" + height + "px; width: 10px;'>";
-                    divRow += "<div class='triangle' style='margin-top:" + (height - 13)+ "px'></div>";
-                    divRow += "</div>";
-                    divRow += "<div class='" + classname + "' style='float: right;" +
-                        "width:" + (width - 10 - imgoffset - offset / 2) + "px;" +
-                        "height:" + height + "px;" +
-                        "'><div class='contenttext' style='line-height:" + height + "px;'>" + text + "</div></div>"
+                    if(classname == "mainrow") {
+                        divRow += "<div style='display: block;float: right; height:" + 
+                                    height + "px; width: 10px;'>";
+                        divRow += "<div class='triangle' style='margin-top:" + 
+                                        (height - 13)+ "px'></div>";
+                        divRow += "</div>";
+
+                        divRow += "<div class='" + classname + "' style='float: right;" +
+                            "width:" + (width - 10 - imgoffset - offset / 2) + "px;" +
+                            "height:" + height + "px;" +
+                            "'><div class='contenttext' style='line-height:" + 
+                            height + "px;'>" + text + "</div></div>"
+                    }
+                    else
+                        divRow += "<div class='" + classname + "' style='float: right;" +
+                            "width:" + (width - imgoffset - offset / 2) + "px;" +
+                            "height:" + height + "px;" +
+                            "'><div class='contenttext' style='line-height:" + 
+                            height + "px;'>" + text + "</div></div>"
                 }
                 
                 if(icon != undefined) {
@@ -130,6 +144,11 @@ $(document).ready(function() {
             this.addRow = function(image, content) {
                 var div = createRow(height, width, image, content, "optionbtn", 4);
                 $("#" + parameters.containerId + "wrapper" + " .scroller").append(div);
+                lines += 1;
+                
+                if(lines * height <= 160)
+                    $("#" + parameters.containerId + "wrapper").height(lines * height);
+
                 return that;
             }
 

@@ -40,10 +40,10 @@
             
             var dropAccount = $('#accountslist').DropDown({
                 image: "pixmaps/turpial.png",
-                value: "@Andrea",
+                value: "@AndreaSt4gi",
             });
              
-            dropAccount.addRow("pixmaps/turpialtwitter.png", "@4ndreaSt4gi")
+            dropAccount.addRow("pixmaps/turpialidentica.png", "@Phonegap")
             .addRow("pixmaps/turpialtwitter.png", "@4ndreaSt4gi")
             .addRow("pixmaps/turpialidentica.png", "@Turpial")
             .addRow("pixmaps/turpialtwitter.png", "@AndreaProva");
@@ -83,9 +83,9 @@
 
                 var messageText = "Hi Turpial mobile!I am in the " + id + " page";
                 
-                var values = { avatar : imagePath, username: "4ndreaSt4gi", 
+                var values = { avatar : imagePath, username: "@4ndreaSt4gi", 
                         message: messageText, reposted_by : "Retweeted by Turpial",
-                        timestamp : "oct 18, 02:07 am from web in reply to xyz"}
+                        timestamp : "3m"}
                 
                 templates.getTemplate("templates/mobile-status.partial", function(template) {
                     for(var i = 0; i < 100; i++)
@@ -139,6 +139,8 @@
                 <li id="menu-me" class="navmenu-element"><div style="border-right: 0px black solid;">Me</div></li>
             </ul>
         </div>
+
+        <div class="blackseparator"></div>
         
         <header id="mainHeader" class="header">
             <div class="topcombo" style="">       

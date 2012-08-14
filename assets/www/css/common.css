@@ -191,9 +191,9 @@ select {
 
 .header .topcombo label {
     float: left;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
-    line-height: 30px;
+    line-height: 45px;
     margin-left: 5px;
     text-shadow: black 0.1em 0.1em 0.2em;    
 }
@@ -229,8 +229,8 @@ select {
 }
 
 .blackseparator {
-    position:absolute;
-    top:45px;
+    position:fixed;
+    top:95px;
     left:0px;
     height: 1px;
     width: 100%;
@@ -284,4 +284,10 @@ select {
     vertical-align:middle;
     color: #E0E0E0 ;
     font-weight: bold;   
+}
+
+.normaltext {
+    color: #FFFFFF;
+    text-shadow: 0.1em 0.1em 0.05em #333;
+    font-size:20px;
 }

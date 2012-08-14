@@ -20,9 +20,9 @@ window.serviceListener = function() {
         
         var messageText = "Hi Turpial human users!I arrive from the seeeerviceee uuuuuuhhhh";
         
-        var values = { avatar : "pixmaps/mentionsdummy.png", username: "4ndreaSt4gi", 
+        var values = { avatar : "pixmaps/mentionsdummy.png", username: "@4ndreaSt4gi", 
                 message: messageText, reposted_by : "Retweeted by Service",
-                timestamp : "oct 18, 02:07 am from web in reply to xyz"}
+                timestamp : "1m"}
         
         templates.getTemplate("templates/mobile-status.partial", function(template) {
             tweetList = templates.fillTemplate(template, values);
