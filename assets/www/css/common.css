@@ -87,7 +87,7 @@ select {
     display: block;
     height: 169px;
     width: 100%;
-    background-image: url("pixmaps/accounts_back.png");
+    background-image: url("../pixmaps/accounts_back.png");
     background-repeat:repeat-x;
 }
 
