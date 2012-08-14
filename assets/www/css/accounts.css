@@ -10,7 +10,7 @@
     
 #accounts {
     position:absolute;
-    top: 30%;
+    top: 120px;
     left: 50%;
     width: 280px;
     display: block;
@@ -18,9 +18,9 @@
 }
     
     
-.addaccount {
+.addaccountdiv {
     position:absolute;
-    top: 20%;
+    top: 60px;
     left: 50%;
     width: 280px;
     display: block;
