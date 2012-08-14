@@ -18,7 +18,7 @@ window.serviceListener = function() {
         
         var tweetList = "";
         
-        var messageText = "Hi Turpial human users!I arrive from the seeeerviceee uuuuuuhhhh";
+        var messageText = "Hi Turpial human users!I arrive from the service uh uh uh zoapo apsofasdf";
         
         var values = { avatar : "pixmaps/mentionsdummy.png", username: "@4ndreaSt4gi", 
                 message: messageText, reposted_by : "Retweeted by Service",
