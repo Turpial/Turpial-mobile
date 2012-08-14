@@ -1,0 +1,109 @@
+<html>
+<head>
+
+    <meta name="viewport" content="width=100%; initial-scale=1; user-scalable=no" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <base><!-- used to process relative links in content -->
+    <title>Turpial</title>
+            
+    <link href="css/common.css" rel="stylesheet" type="text/css">
+    <link href="css/accounts.css" rel="stylesheet" type="text/css">
+    <link href="css/dropdown.css" rel="stylesheet" type="text/css">
+        
+    <script type="text/javascript" charset="utf-8" src="js/cordova-1.7.0.js"></script> 
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/iscroll.js"></script>
+    <script type="text/javascript" src="js/iscrollfactory.js"></script>
+    <script type="text/javascript" src="js/templates.js"></script>
+    <script type="text/javascript" src="js/servicelistener.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/dropdown.js"></script>
+    <script type="text/javascript" src="js/imagebutton.js"></script>
+    
+    <script type="text/javascript">
+    
+    function deleteAccount(accountId) {
+        alert("DELETED" + accountId);
+    }
+    
+    function addAccount(values) {
+        
+        templates.getTemplate("templates/account_line.partial", function(template) {
+            newAccountLine = templates.fillTemplate(template, values);
+            $("#accounts").append(newAccountLine);
+            
+         });
+    }
+    
+    
+    $(document).ready(function() {
+                
+        var accounts = 1;
+        $("#accounts").css("margin-left", (-1)*($("#accounts").width()/2) + "px");   
+        $(".addbtn").click(function() {
+            var current_height = $("#accounts").height();
+            current_height = current_height + current_height / accounts;
+            $("#accounts").height(current_height + "px");
+            addAccount();
+            accounts++;
+        });
+        
+        var dropAccountType = $('#accounttype').DropDown({
+            image: "pixmaps/turpialtwitter.png",
+            value: "Twitter",
+        });
+        
+        var addaccountBtn = $('#addaccountbtn').ImageButton({
+            image: "pixmaps/actionbar/light/add.png",
+            callback: undefined,
+        });
+        
+        dropAccountType.addRow("pixmaps/turpialtwitter.png", "Twitter")
+        .addRow("pixmaps/turpialidentica.png", "Identica");
+
+
+        addAccount({ account_id: "twitter-4ndreaSt4gi", 
+                     account_name : "4ndreaSt4gi",
+                     account_img : "pixmaps/turpialtwitter.png",})
+
+        addAccount({ account_id: "twitter-Turpial", 
+                     account_name : "Turpial",
+                     account_img : "pixmaps/turpialtwitter.png",})
+
+        addAccount({ account_id: "identica-phonegap", 
+                     account_name : "Phonegap",
+                     account_img : "pixmaps/turpialidentica.png",})
+
+        addAccount({ account_id: "twitter-Twitter", 
+                     account_name : "Twitter",
+                     account_img : "pixmaps/turpialtwitter.png",})
+
+    });
+    
+    </script>
+    
+</head>
+<body onload="init();" style="background-color: #262626;">
+
+        <!-- The header of our application -->
+        <header id="mainHeader" class="header">
+            <div class="topcombo">
+                <img src="pixmaps/turpial.png" />
+                <label>Accounts</label>
+            </div>
+        </header>
+        
+        <div class="footer"></div>
+        
+        <!-- Our mentions-->
+        <div id="accounts" class="">
+
+        </div>
+        
+        <div class="addaccountdiv">
+            <div id="accounttype" style="float:left; width: 200px; height:45px;"></div>
+            <div id="addaccountbtn" style="float:right;" class="addbtn"></div>
+        </div>
+                
+</body>
+</html>

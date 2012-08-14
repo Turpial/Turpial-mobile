@@ -1,0 +1,33 @@
+.dropdown .wrapper .scroller .rowcontainer {
+    color: #FFFFFF;
+    text-shadow: 0.1em 0.1em 0.05em #333;
+    font-size:20px;
+    background: #585858;
+    -webkit-box-shadow: inset 0 0 3px #000000;
+}
+
+.dropdown .mainel {
+    color: #FFFFFF;
+    text-shadow: 0.1em 0.1em 0.05em #333;
+    font-size:20px;
+}
+
+.dropdown .wrapper {
+    background-color: #000000;
+}
+
+.dropdown .mainrow .contenttext {
+    margin-left: 4px;
+}
+
+.dropdown .wrapper .scroller .rowcontainer .optionbtn .contenttext {
+    margin-left: 4px;
+}
+
+.triangle {
+    width: 0px;
+    height: 0px;
+    border-bottom:0px solid transparent;
+    border-top: 10px solid transparent;
+    border-right: 10px solid #FFFFFF;
+}

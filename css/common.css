@@ -1,0 +1,293 @@
+html {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Grande', Verdana, Helvetica, sans-serif !important;
+    font-size: 14px;
+}
+
+a:link, a:visited{
+    color: none;
+    text-decoration: none;
+    outline: none;
+}
+
+a:hover{
+    color: none;
+    text-decoration: none;
+    outline: none;
+}
+
+/* TODO: Fix the gradient here */
+input[type="text"], input[type="password"]{
+    padding: 4px;
+    border: 1px solid #aaa;
+    color: #333;
+    vertical-align: middle;
+    /*background: #fff url('<% css_img "textinput-background.png" %>') repeat-x top;*/
+    margin: 0 0 5px 0;
+    border-color: #a7a3a0;
+    outline: none;
+}
+
+.button {
+    float: left;
+    height: 19px;
+    width: 19px;
+    padding: 3px 0 0 3px;
+}
+
+.button:hover {
+    background-color: #424242;
+}
+
+.disabled_text {
+    color: #999;
+    cursor: default !important;
+}
+
+input[disabled='disabled'], textarea[disabled='disabled'] {
+    color: #808080;
+    background-color: #ddd;
+}
+
+.clearfix:before, .clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.overflow {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+select {
+    
+    float: left;
+    width: 100%;
+    background: none;
+    border-color: #FFFFFF;
+    color: #FFFFFF;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;  
+    display: block;
+    height: 169px;
+    width: 100%;
+    background-image: url("../pixmaps/accounts_back.png");
+    background-repeat:repeat-x;
+}
+
+/*** Dock stuffs ***/
+
+#dock-container {
+    height: 22px;
+    background: url('<% css_img "anchor.png" %>') no-repeat bottom right;
+    float: right;
+    width: 182px;
+}
+
+#dock {
+    float: right;
+    height: 22px;
+    margin-right: 10px;
+}
+
+/*** Notice stuffs ***/
+
+#alert-message {
+    position: absolute;
+    top: 25px;
+    margin: 0 auto;
+    z-index: 9999;
+    border-radius: 4px;
+    padding: 4px 5px 4px 10px;
+    background-repeat: repeat-x;
+    border-width: 1px;
+    border-style: solid;
+    cursor: pointer;
+}
+
+#alert-label {
+    float: left;
+    font-size: 12px;
+    width: 200px;
+    margin-top: 3px;
+    cursor: pointer;
+}
+
+#alert-message .close {
+    float: right;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    opacity: 0.25;
+    width: 15px;
+    color: #000;
+}
+
+#alert-message.error {
+    color: #fff;
+    background-color: #c43c35;
+    background-image: -webkit-linear-gradient(top, #ee5f5b, #c43c35);
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+}
+
+#alert-message.warning {
+    color: #404040;
+    background-color: #eedc94;
+    background-image: -webkit-linear-gradient(top, #fceec1, #eedc94);
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+#alert-message.info {
+    color: #fff;
+    background-color: #57a957;
+    background-image: -webkit-linear-gradient(top, #62c462, #57a957);
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+}
+
+/*** Header stuffs ***/
+
+.header {
+    position:fixed;
+    top:0px;
+    left:0px;
+    width:100%;
+    height: 45px;
+    float: left;
+    background-color: #000;
+    color: #ebebeb;
+    text-align: left;
+}
+
+.header .topcombo {
+    vertical-align:middle;
+    float: left;
+    width:100%;
+    height: 45px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#34952b), to(#176b21));
+}
+
+.header .topcombo img {
+    display: block;
+    float: left;
+    margin-left: 3px;
+}
+
+.header .topcombo label {
+    float: left;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 45px;
+    margin-left: 5px;
+    text-shadow: black 0.1em 0.1em 0.2em;    
+}
+
+
+.header .combo {
+    float: left;
+    width:100%;
+}
+
+.header .combo img {
+    padding: 3px 0 0 3px;
+    display: block;
+    float: left;
+}
+
+.header .combo label {
+    padding: 4px 6px 0 6px;
+    float: left;
+    max-height: 80px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.header .buttons {
+    float: right;
+    margin-right: 5px;
+}
+
+.header .progress {
+    float: right;
+    margin: 2px 8px 0 0;
+}
+
+.blackseparator {
+    position:fixed;
+    top:95px;
+    left:0px;
+    height: 1px;
+    width: 100%;
+    background-color: #000000;  
+    display: block;
+}
+
+.menudiv {
+    position: fixed; 
+    top: 45px; 
+    width: 100%; 
+    height: 100%;
+}
+
+
+#navmenu {
+    display: inline; 
+    width: 100%;
+}
+
+.navmenu-element-clicked {
+    width:25%; float:left;
+    height: 50px;
+    text-align:center;
+    display: table;
+    background: -webkit-gradient(linear, left top, left bottom, from(#383838), to(#181818));
+}
+
+.navmenu-element-clicked div{
+    border-right: 1px black solid;
+    display: table-cell;
+    height:50px;
+    vertical-align:middle;
+    color: #FFFFFF;
+    font-weight: bold;
+    -webkit-box-shadow: inset 0 0 10px #000000;
+}
+
+.navmenu-element {
+    width:25%; float:left;
+    height: 50px;
+    text-align:center;
+    display: table;
+    background: -webkit-gradient(linear, left top, left bottom, from(#404040), to(#202020));
+}
+
+.navmenu-element div{
+    border-right: 1px black solid;
+    display: table-cell;
+    height:40px;
+    vertical-align:middle;
+    color: #E0E0E0 ;
+    font-weight: bold;   
+}
+
+.normaltext {
+    color: #FFFFFF;
+    text-shadow: 0.1em 0.1em 0.05em #333;
+    font-size:20px;
+}

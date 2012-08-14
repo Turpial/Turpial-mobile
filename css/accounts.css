@@ -1,0 +1,36 @@
+.blackseparator {
+    position:absolute;
+    top:30px;
+    left:0px;
+    height: 1px;
+    width: 100%;
+    background-color: #000000;  
+    display: block;
+}
+    
+#accounts {
+    position:absolute;
+    top: 120px;
+    left: 50%;
+    width: 280px;
+    display: block;
+    margin-left: -140px;
+}
+    
+    
+.addaccountdiv {
+    position:absolute;
+    top: 60px;
+    left: 50%;
+    width: 280px;
+    display: block;
+    margin-left: -140px;
+}
+
+.accname {
+    margin-left: 5px;
+    line-height: 45px;
+    color: #FFFFFF;
+    text-shadow: 0.1em 0.1em 0.05em #333;
+    font-size:20px;
+}
